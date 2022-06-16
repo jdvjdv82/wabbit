@@ -76,10 +76,6 @@ type (
 
 	// Error is an interface for AMQP errors
 	Error interface {
-		Code() int
-		Reason() string
-		Server() bool
-		Recover() bool
 		error
 	}
 )

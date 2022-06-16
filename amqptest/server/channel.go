@@ -6,8 +6,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/utils"
+	"github.com/jdvjdv82/wabbit"
+	"github.com/jdvjdv82/wabbit/utils"
 	amqp "github.com/rabbitmq/amqp091-go"
 )
 

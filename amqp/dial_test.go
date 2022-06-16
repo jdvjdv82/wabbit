@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NeowayLabs/wabbit"
 	docker "github.com/fsouza/go-dockerclient"
+	"github.com/jdvjdv82/wabbit"
 	amqp "github.com/rabbitmq/amqp091-go"
 	"github.com/tiago4orion/conjure"
 )

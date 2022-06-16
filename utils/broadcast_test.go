@@ -1,11 +1,15 @@
 package utils
 
 import (
+	"fmt"
+	"strings"
 	"testing"
 	"time"
 
-	"github.com/NeowayLabs/wabbit"
+	"github.com/jdvjdv82/wabbit"
 )
+
+var testString = fmt.Sprintf("Exception (%d) Reason: %q", 1337, "teste")
 
 func TestBroadcast(t *testing.T) {
 	spread := NewErrBroadcast()
@@ -27,7 +31,7 @@ func TestBroadcast(t *testing.T) {
 			return
 		}
 
-		if v.Code() != 1337 || v.Reason() != "teste" {
+		if !strings.EqualFold(v.Error(), testString) {
 			t.Errorf("Broadcast not working...")
 			return
 		}

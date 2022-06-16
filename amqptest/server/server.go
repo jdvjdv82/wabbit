@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/NeowayLabs/wabbit"
-	"github.com/NeowayLabs/wabbit/utils"
+	"github.com/jdvjdv82/wabbit"
+	"github.com/jdvjdv82/wabbit/utils"
 )
 
 const (
@@ -58,8 +58,8 @@ func (s *AMQPServer) CreateChannel(connID string, conn wabbit.Conn) (wabbit.Chan
 	channels := s.channels[connID]
 
 	if len(channels) >= MaxChannels {
-		return nil, fmt.Errorf("Channel quota exceeded, Wabbit"+
-			" supports only %d fake channels for tests.", MaxChannels)
+		return nil, fmt.Errorf("channel quota exceeded, Wabbit"+
+			" supports only %d fake channels for tests", MaxChannels)
 	}
 
 	ch := NewChannel(s.vhost)
